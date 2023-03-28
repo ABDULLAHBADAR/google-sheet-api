@@ -31,10 +31,7 @@ async function handleRequest(req, res) {
 
 app.get('/', handleRequest);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
+app.listen(process.env.PORT || 3000);
 
 
 const writeToCsv = async (data) => {
